@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { EditTemplatePage } from '../edit-template/edit-template';
 
 @Component({
   selector: 'page-templates',
@@ -11,4 +12,7 @@ export class TemplatesPage {
 
   }
 
+  onEditTemplate() {
+    this.navCtrl.push(EditTemplatePage);
+  }
 }

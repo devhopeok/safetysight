@@ -6,11 +6,15 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { TemplatesPage } from '../pages/templates/templates';
+import { EditTemplatePage } from '../pages/edit-template/edit-template';
+import { AnswerTypePage } from '../pages/answer-type/answer-type';
 
 @NgModule({
   declarations: [
     MyApp,
     TemplatesPage,
+    EditTemplatePage,
+    AnswerTypePage,
   ],
   imports: [
     BrowserModule,
@@ -19,7 +23,9 @@ import { TemplatesPage } from '../pages/templates/templates';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    TemplatesPage
+    TemplatesPage,
+    EditTemplatePage,
+    AnswerTypePage,
   ],
   providers: [
     StatusBar,

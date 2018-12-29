@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Edit Template
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-content>
+      <ion-textarea class="question-area" rows="3" type="text" placeholder="Type your question here"></ion-textarea>
+      <div class="answer-type-div">
+        <div class="type-label">Type: <span class="type-span">Multiple Choice</span></div>
+        <div class="change-btn" (click)="onSelectType();">CHANGE</div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

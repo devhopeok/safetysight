@@ -1,0 +1,27 @@
+page-edit-template {
+  .question-area {
+    border-bottom: 1px solid map-get($map: $colors, $key: primary);
+  }
+
+  .answer-type-div {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+  
+    .type-label {
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .type-span {
+      font-weight: 400;
+      font-size: 14px;
+    }
+
+    .change-btn {
+      color: map-get($map: $colors, $key: primary);
+    }
+  }
+}
