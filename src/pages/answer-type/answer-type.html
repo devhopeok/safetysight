@@ -12,5 +12,9 @@
 </ion-header>
 
 <ion-content padding>
-  Select Answer Type
+  <ion-item *ngFor="let item of answerType" (click)="onSelectType(item)">
+    <ion-icon item-start [name]="item.icon">
+    </ion-icon>
+    {{item.type}}
+  </ion-item>
 </ion-content>

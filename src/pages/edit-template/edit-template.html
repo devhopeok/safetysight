@@ -6,14 +6,27 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
   <ion-card>
     <ion-card-content>
-      <ion-textarea class="question-area" rows="3" type="text" placeholder="Type your question here"></ion-textarea>
+      <ion-textarea class="question-area" rows="3" type="text" placeholder="Type your question here" [(ngModel)]="question"></ion-textarea>
       <div class="answer-type-div">
-        <div class="type-label">Type: <span class="type-span">Multiple Choice</span></div>
+        <div class="type-label">Type: <span class="type-span">{{answerType}}</span></div>
         <div class="change-btn" (click)="onSelectType();">CHANGE</div>
       </div>
+      <button ion-button class="add-question" [disabled]="question == ''" (click)="onAddQuestion()">Add Question</button>
     </ion-card-content>
   </ion-card>
+
+  <ion-list [dragula]="'questions'" [(dragulaModel)]="questions">
+    <ion-item *ngFor="let question of questions">
+      <ion-icon item-start [name]="question.icon">
+      </ion-icon>
+      <div>
+        <p class="question-label">{{question.question}}</p>
+        <p>{{question.answerType}}</p>
+      </div>
+      <ion-icon item-end name="menu"></ion-icon>
+    </ion-item>
+  </ion-list>
 </ion-content>

@@ -8,6 +8,7 @@ import { MyApp } from './app.component';
 import { TemplatesPage } from '../pages/templates/templates';
 import { EditTemplatePage } from '../pages/edit-template/edit-template';
 import { AnswerTypePage } from '../pages/answer-type/answer-type';
+import { DragulaModule } from 'ng2-dragula';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { AnswerTypePage } from '../pages/answer-type/answer-type';
   ],
   imports: [
     BrowserModule,
+    DragulaModule.forRoot(),
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

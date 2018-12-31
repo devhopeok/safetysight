@@ -24,4 +24,14 @@ page-edit-template {
       color: map-get($map: $colors, $key: primary);
     }
   }
+
+  .add-question {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .question-label {
+    color: black;
+    font-size: 18px;
+  }
 }
