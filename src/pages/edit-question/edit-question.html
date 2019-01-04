@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Edit Question
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-textarea class="question-area" rows="2" type="text" placeholder="Type your question here" [(ngModel)]="question.question"></ion-textarea>
+      <div class="answer-type-div">
+        <div class="type-label">Type: <span class="type-span">{{question.answerType}}</span></div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-item>
+    <ion-label>Mandatory</ion-label>
+    <ion-checkbox [(ngModel)]="question.mandatory"></ion-checkbox>
+  </ion-item>
+
+  <!-- Date Time -->
+  <ion-item *ngIf="question.answerType == 'Date Time'">
+    <ion-label>Date</ion-label>
+    <ion-checkbox [(ngModel)]="question.setting.date"></ion-checkbox>
+  </ion-item>
+  <ion-item *ngIf="question.answerType == 'Date Time'">
+    <ion-label>Time</ion-label>
+    <ion-checkbox [(ngModel)]="question.setting.time"></ion-checkbox>
+  </ion-item>
+
+  <!-- Multiple Choice -->
+  <div *ngIf="question.answerType == 'Multiple Choice'">
+    <ion-item *ngFor="let choice of question.setting; let i = index; trackBy: customTrackBy">
+      <ion-input [(ngModel)]="question.setting[i]"></ion-input>
+      <button ion-button icon-only item-end clear (click)="onRemove(i)">
+        <ion-icon color="danger" name="close-circle"></ion-icon>
+      </button>
+    </ion-item>
+  </div>
+  <button class="add-btn" *ngIf="question.answerType == 'Multiple Choice'" ion-button (click)="onAdd();">Add Item</button>
+
+  <!-- Signature -->
+  <ion-item *ngIf="question.answerType == 'Signature'">
+    <ion-label>Include Timestamp</ion-label>
+    <ion-checkbox [(ngModel)]="question.setting.timestamp"></ion-checkbox>
+  </ion-item>
+
+  <!-- Slider -->
+  <div *ngIf="question.answerType == 'Slider'">
+    <ion-item>
+      <ion-label>Min Value</ion-label>
+      <ion-input [(ngModel)]="question.setting.min"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Max Value</ion-label>
+      <ion-input [(ngModel)]="question.setting.max"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Increment</ion-label>
+      <ion-input [(ngModel)]="question.setting.increment"></ion-input>
+    </ion-item>
+  </div>
+</ion-content>

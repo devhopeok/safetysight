@@ -9,7 +9,7 @@
 <ion-content>
   <ion-card>
     <ion-card-content>
-      <ion-textarea class="question-area" rows="3" type="text" placeholder="Type your question here" [(ngModel)]="question"></ion-textarea>
+      <ion-textarea class="question-area" rows="2" type="text" placeholder="Type your question here" [(ngModel)]="question"></ion-textarea>
       <div class="answer-type-div">
         <div class="type-label">Type: <span class="type-span">{{answerType}}</span></div>
         <div class="change-btn" (click)="onSelectType();">CHANGE</div>
@@ -18,8 +18,8 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-list [dragula]="'questions'" [(dragulaModel)]="questions">
-    <ion-item *ngFor="let question of questions">
+  <ion-list id="list" [dragula]="'questions'" [(dragulaModel)]="globalProvider.questions">
+    <ion-item *ngFor="let question of globalProvider.questions; let i = index;" (click)="onEdit(i);">
       <ion-icon item-start [name]="question.icon">
       </ion-icon>
       <div>

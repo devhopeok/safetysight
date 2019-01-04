@@ -1,4 +1,4 @@
-page-edit-template {
+page-edit-question {
   .question-area {
     border-bottom: 1px solid map-get($map: $colors, $key: primary);
   }
@@ -25,18 +25,9 @@ page-edit-template {
     }
   }
 
-  .add-question {
-    width: 100%;
-    margin-top: 15px;
-  }
-
-  .question-label {
-    color: black;
-    font-size: 18px;
-  }
-
-  ion-list {
-    width: 90%;
-    margin: auto !important;
+  .add-btn {
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 18px;
   }
 }

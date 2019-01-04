@@ -8,7 +8,9 @@ import { MyApp } from './app.component';
 import { TemplatesPage } from '../pages/templates/templates';
 import { EditTemplatePage } from '../pages/edit-template/edit-template';
 import { AnswerTypePage } from '../pages/answer-type/answer-type';
+import { EditQuestionPage } from '../pages/edit-question/edit-question';
 import { DragulaModule } from 'ng2-dragula';
+import { GlobalProvider } from '../providers/global/global';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,7 @@ import { DragulaModule } from 'ng2-dragula';
     TemplatesPage,
     EditTemplatePage,
     AnswerTypePage,
+    EditQuestionPage,
   ],
   imports: [
     BrowserModule,
@@ -28,11 +31,13 @@ import { DragulaModule } from 'ng2-dragula';
     TemplatesPage,
     EditTemplatePage,
     AnswerTypePage,
+    EditQuestionPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GlobalProvider
   ]
 })
 export class AppModule {}
