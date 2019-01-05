@@ -19,14 +19,37 @@
   </ion-card>
 
   <ion-list id="list" [dragula]="'questions'" [(dragulaModel)]="globalProvider.questions">
-    <ion-item *ngFor="let question of globalProvider.questions; let i = index;" (click)="onEdit(i);">
-      <ion-icon item-start [name]="question.icon">
-      </ion-icon>
-      <div>
-        <p class="question-label">{{question.question}}</p>
-        <p>{{question.answerType}}</p>
-      </div>
-      <ion-icon item-end name="menu"></ion-icon>
-    </ion-item>
+    <ion-item-sliding #slidingItem *ngFor="let question of globalProvider.questions; let i = index;">
+      <ion-item #item *ngIf="question.answerType != 'Section Header'">
+        <ion-icon item-start [name]="question.icon" (click)="onEdit(i);">
+        </ion-icon>
+        <div (click)="onEdit(i);">
+          <p class="question-label">{{question.question}}</p>
+          <p>{{question.answerType}}</p>
+        </div>
+        <ion-icon item-end name="menu" (click)="onMenu(slidingItem, item);"></ion-icon>
+      </ion-item>
+
+      <ion-item-options side="right" *ngIf="question.answerType != 'Section Header'">
+        <button class="slide-btn" ion-button (click)="onEdit1(slidingItem, i);">
+          Edit
+          <ion-icon class="slide-icon" name="md-create"></ion-icon>
+        </button>
+        <button class="slide-btn" ion-button color="danger" (click)="onDelete(slidingItem, i)">
+          Delete
+          <ion-icon class="slide-icon" name="md-trash"></ion-icon>
+        </button>
+        <button class="slide-btn" ion-button color="dark" (click)="onClose(slidingItem)">
+          Close
+          <ion-icon class="slide-icon" name="md-close-circle"></ion-icon>
+        </button>
+      </ion-item-options>
+
+      <ion-item class="section" *ngIf="question.answerType == 'Section Header'" (click)="onEdit(i)">
+        <div>
+          <p class="question-label">{{question.question}}</p>
+        </div>
+      </ion-item>
+    </ion-item-sliding>
   </ion-list>
 </ion-content>

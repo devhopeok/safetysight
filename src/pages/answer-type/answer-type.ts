@@ -7,7 +7,8 @@ import { NavController, ViewController } from 'ionic-angular';
 })
 export class AnswerTypePage {
 
-  answerType = [{type: 'Checkbox', icon: 'checkbox'},
+  answerType = [{type: 'Section Header', icon: 'ios-book'},
+                {type: 'Checkbox', icon: 'checkbox'},
                 {type: 'Date Time', icon: 'md-calendar'},
                 {type: 'Drawing', icon: 'brush'},
                 {type: 'Location', icon: 'md-pin'},

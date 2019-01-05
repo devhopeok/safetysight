@@ -39,4 +39,26 @@ page-edit-template {
     width: 90%;
     margin: auto !important;
   }
+
+  .slide-btn {
+    width: 60px;
+    padding-top: 6px;
+  }
+
+  .slide-icon {
+    margin-top: 5px;
+  }
+
+  .section {
+    background: gray;
+
+    .question-label {
+      color: white;
+      font-size: 12px;
+    }
+
+    .item-inner {
+      border: none !important;
+    }
+  }
 }

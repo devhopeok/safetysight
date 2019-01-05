@@ -66,4 +66,27 @@ export class EditTemplatePage {
   onEdit(index) {
     this.navCtrl.push(EditQuestionPage, {index});
   }
+
+  onMenu(itemSlide, item) {
+    itemSlide.setElementClass("active-sliding", true);
+    itemSlide.setElementClass("active-slide", true);
+    itemSlide.setElementClass("active-options-right", true);
+    item.setElementStyle("transform", "translate3d(-180px, 0px, 0px)");
+  }
+
+  onClose(item) {
+    item.close();
+    item.setElementClass("active-sliding", false);
+    item.setElementClass("active-slide", false);
+    item.setElementClass("active-options-right", false);
+  }
+
+  onEdit1(item, index) {
+    this.navCtrl.push(EditQuestionPage, {index});
+    this.onClose(item);
+  }
+
+  onDelete(item, index) {
+    this.globalProvider.questions.splice(index, 1);
+  }
 }

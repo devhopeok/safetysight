@@ -16,7 +16,7 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-item>
+  <ion-item *ngIf="question.answerType != 'Section Header'">
     <ion-label>Mandatory</ion-label>
     <ion-checkbox [(ngModel)]="question.mandatory"></ion-checkbox>
   </ion-item>
