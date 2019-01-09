@@ -11,6 +11,7 @@ import { AnswerTypePage } from '../pages/answer-type/answer-type';
 import { EditQuestionPage } from '../pages/edit-question/edit-question';
 import { DragulaModule } from 'ng2-dragula';
 import { GlobalProvider } from '../providers/global/global';
+import { LoginPage } from '../pages/login/login';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { GlobalProvider } from '../providers/global/global';
     EditTemplatePage,
     AnswerTypePage,
     EditQuestionPage,
+    LoginPage,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +34,7 @@ import { GlobalProvider } from '../providers/global/global';
     EditTemplatePage,
     AnswerTypePage,
     EditQuestionPage,
+    LoginPage,
   ],
   providers: [
     StatusBar,

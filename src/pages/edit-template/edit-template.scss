@@ -35,9 +35,12 @@ page-edit-template {
     font-size: 18px;
   }
 
-  ion-list {
-    width: 90%;
-    margin: auto !important;
+  ion-item {
+    padding-right: 0px !important;
+
+    .item-inner {
+      margin-left: 5px !important;
+    }
   }
 
   .slide-btn {
