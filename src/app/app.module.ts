@@ -12,6 +12,7 @@ import { EditQuestionPage } from '../pages/edit-question/edit-question';
 import { DragulaModule } from 'ng2-dragula';
 import { GlobalProvider } from '../providers/global/global';
 import { LoginPage } from '../pages/login/login';
+import { ResetPwdPage } from '../pages/reset-pwd/reset-pwd';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { LoginPage } from '../pages/login/login';
     AnswerTypePage,
     EditQuestionPage,
     LoginPage,
+    ResetPwdPage,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +37,7 @@ import { LoginPage } from '../pages/login/login';
     AnswerTypePage,
     EditQuestionPage,
     LoginPage,
+    ResetPwdPage,
   ],
   providers: [
     StatusBar,
