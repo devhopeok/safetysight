@@ -23,3 +23,7 @@ ion-item {
     background: map-get($colors, danger);
     text-align: center;
 }
+
+.toast-wrapper {
+    margin-bottom: 50px !important;
+}

@@ -13,6 +13,8 @@ import { DragulaModule } from 'ng2-dragula';
 import { GlobalProvider } from '../providers/global/global';
 import { LoginPage } from '../pages/login/login';
 import { ResetPwdPage } from '../pages/reset-pwd/reset-pwd';
+import { Signup1Page } from '../pages/signup1/signup1';
+import { Signup2Page } from '../pages/signup2/signup2';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { ResetPwdPage } from '../pages/reset-pwd/reset-pwd';
     EditQuestionPage,
     LoginPage,
     ResetPwdPage,
+    Signup1Page,
+    Signup2Page,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +42,8 @@ import { ResetPwdPage } from '../pages/reset-pwd/reset-pwd';
     EditQuestionPage,
     LoginPage,
     ResetPwdPage,
+    Signup1Page,
+    Signup2Page,
   ],
   providers: [
     StatusBar,

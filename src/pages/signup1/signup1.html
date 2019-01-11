@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Sign Up - Step 1 of 5
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <p class="enter-title">Enter your details below:</p>
+  <ion-item>
+    <ion-label color="primary" stacked>First Name:</ion-label>
+    <ion-input placeholder="Enter the first name" [(ngModel)]="signupInfo.firstName"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary" stacked>Surname:</ion-label>
+    <ion-input placeholder="Enter the surname" [(ngModel)]="signupInfo.surname"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary" stacked>Email:</ion-label>
+    <ion-input type="email" placeholder="Enter the email address" [(ngModel)]="signupInfo.email"></ion-input>
+  </ion-item>
+  
+  <button ion-button class="login-btn" (click)="onNext();">
+    Next
+  </button>
+</ion-content>
