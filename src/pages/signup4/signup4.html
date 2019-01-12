@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Sign Up - Step 4 of 5
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <p class="enter-title" *ngIf="signupInfo.isPremium">
+    Your account is now set up. You can now add other users below and the last step is creating your first form:
+  </p>
+
+  <p class="enter-title" *ngIf="!signupInfo.isPremium">
+    You need a Premium Account to add more users.
+  </p>
+
+  <div *ngIf="signupInfo.isPremium">
+    <p class="add-user" (click)="onAddUser();">
+      <ion-icon name="md-add-circle"></ion-icon>
+      Add User
+    </p>
+    <ion-list>
+      <ion-item *ngFor="let user of signupInfo.users; let i = index;" (click)="onEditUser(i);">
+        <div>
+          <p class="user-info">{{user.firstName}} {{user.surname}}</p>
+          <p>{{user.email}}</p>
+        </div>
+        <ion-icon item-end name="md-create"></ion-icon>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <button ion-button class="login-btn" (click)="onNext();">
+    Next
+  </button>
+</ion-content>

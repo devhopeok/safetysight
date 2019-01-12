@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Select your plan(Step 3)
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <p class="enter-title">Free - single user, build up to 3 forms</p>
+  <button ion-button class="login-btn" color="selected" *ngIf="!signupInfo.isPremium">
+    Free
+    <ion-icon padding-left name="md-checkmark" class="check-icon" color="secondary"></ion-icon>
+  </button>
+  <button ion-button class="login-btn" color="primary" *ngIf="signupInfo.isPremium" (click)="onSetFree();">
+    Free
+  </button>
+  
+  <div class="separate-line"></div>
+
+  <p class="enter-title">Premium - unlimited users, unlimited forms</p>
+  <p class="enter-title">Admin User: $10 per month per user (can create forms, complete forms and actions)</p>
+  <p class="enter-title">General User: $2 per month per user (can complete forms and actions)</p>
+  <button ion-button class="login-btn" color="primary" *ngIf="!signupInfo.isPremium" (click)="onSetPremium();">
+    Premium
+  </button>
+  <button ion-button class="login-btn" color="selected" *ngIf="signupInfo.isPremium">
+    Premium
+    <ion-icon padding-left name="md-checkmark" class="check-icon" color="secondary"></ion-icon>
+  </button>
+
+  <div *ngIf="signupInfo.isPremium">
+    <ion-item>
+      <ion-label color="primary" stacked>Name on Card:</ion-label>
+      <ion-input placeholder="Enter the name on card" [(ngModel)]="signupInfo.card"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label color="primary" stacked>Credit Card Number:</ion-label>
+      <ion-input placeholder="Enter the CC Number" [(ngModel)]="signupInfo.ccNumber"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Expiry:</ion-label>
+      <ion-datetime displayFormat="MM/YYYY" min="2019" max="2050" placeholder="MM/YYYY" [(ngModel)]="signupInfo.expiry">
+      </ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>CCV:</ion-label>
+      <ion-input placeholder="Enter CCV" [(ngModel)]="signupInfo.ccv"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="separate-line"></div>
+
+  <button ion-button class="login-btn" (click)="onNext();">
+    Next
+  </button>
+</ion-content>

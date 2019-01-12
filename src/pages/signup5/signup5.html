@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Sign Up - Step 5 of 5
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <p class="enter-title">
+    You can now create your first form. You can edit this one or add others later:
+  </p>
+
+  <ion-item>
+    <ion-label color="primary" stacked>Form Name:</ion-label>
+    <ion-input placeholder="Enter the form name" [(ngModel)]="signupInfo.formName"></ion-input>
+  </ion-item>
+  <p class="tip">The name of the Form that users will see.</p>
+
+  <ion-item>
+    <ion-label color="primary" stacked>Form Prefix:</ion-label>
+    <ion-input placeholder="Enter the form prefix" [(ngModel)]="signupInfo.formPrefix"></ion-input>
+  </ion-item>
+  <p class="tip">A 2-5 letter code used in the ID for each completed form.</p>
+
+  <ion-item>
+    <ion-label color="primary" stacked>Form Icon:</ion-label>
+    <ion-icon item-start name="card"></ion-icon>
+    <ion-input placeholder="Enter the form icon" [(ngModel)]="signupInfo.formIcon"></ion-input>
+  </ion-item>
+  <button ion-button class="login-btn" (click)="onNext();">
+    Next
+  </button>
+</ion-content>

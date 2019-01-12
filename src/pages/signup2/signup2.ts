@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, ToastController, Events, NavParams } from 'ionic-angular';
+import { Signup3Page } from '../signup3/signup3';
 
 @Component({
   selector: 'page-signup2',
@@ -40,5 +41,7 @@ export class Signup2Page {
       this.presentToast('The fields can\'t be blank');
       return;
     }
+
+    this.navCtrl.push(Signup3Page, {signupInfo: this.signupInfo});
   }
 }

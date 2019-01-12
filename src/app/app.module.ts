@@ -15,6 +15,10 @@ import { LoginPage } from '../pages/login/login';
 import { ResetPwdPage } from '../pages/reset-pwd/reset-pwd';
 import { Signup1Page } from '../pages/signup1/signup1';
 import { Signup2Page } from '../pages/signup2/signup2';
+import { Signup3Page } from '../pages/signup3/signup3';
+import { Signup4Page } from '../pages/signup4/signup4';
+import { Signup5Page } from '../pages/signup5/signup5';
+import { EditUserPage } from '../pages/edit-user/edit-user';
 
 @NgModule({
   declarations: [
@@ -27,6 +31,10 @@ import { Signup2Page } from '../pages/signup2/signup2';
     ResetPwdPage,
     Signup1Page,
     Signup2Page,
+    Signup3Page,
+    Signup4Page,
+    Signup5Page,
+    EditUserPage,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +52,10 @@ import { Signup2Page } from '../pages/signup2/signup2';
     ResetPwdPage,
     Signup1Page,
     Signup2Page,
+    Signup3Page,
+    Signup4Page,
+    Signup5Page,
+    EditUserPage,
   ],
   providers: [
     StatusBar,

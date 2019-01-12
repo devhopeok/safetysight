@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Edit User
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="onClose()">
+        Close
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <p class="enter-title">Enter the user's details below:</p>
+  <ion-item>
+    <ion-label color="primary" stacked>Email:</ion-label>
+    <ion-input type="email" placeholder="Enter the email address" [(ngModel)]="userInfo.email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" stacked>First Name:</ion-label>
+    <ion-input type="text" placeholder="Enter the first name" [(ngModel)]="userInfo.firstName"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" stacked>Surname:</ion-label>
+    <ion-input type="text" placeholder="Enter the surname" [(ngModel)]="userInfo.surname"></ion-input>
+  </ion-item>
+
+  <button ion-button icon-start class="login-btn" color="primary" (click)="onSave();">
+    <ion-icon padding-right name="md-add-circle"></ion-icon>
+    Save User
+  </button>
+</ion-content>

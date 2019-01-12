@@ -1,0 +1,31 @@
+page-signup5 {
+  .enter-title {
+    text-align: center;
+    font-size: 4.5vw;
+    margin: 16px;
+  }
+
+  .login-btn {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 10vw;
+  }
+
+  .tip {
+    color: gray;
+    padding-left: 16px;
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .add-user {
+    color: map-get($colors, primary);
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .user-info {
+    color: black;
+    font-size: 16px;
+  }
+}
