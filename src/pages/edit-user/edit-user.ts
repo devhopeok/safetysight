@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, ToastController, Events, MenuController, NavParams, ViewController } from 'ionic-angular';
-import { TemplatesPage } from '../templates/templates';
-import { ResetPwdPage } from '../reset-pwd/reset-pwd';
-import { Signup1Page } from '../signup1/signup1';
 
 @Component({
   selector: 'page-edit-user',
@@ -23,7 +20,6 @@ export class EditUserPage {
     public navParams: NavParams,
     public viewCtrl: ViewController) {
     this.userInfo = this.navParams.get('userInfo') ? this.navParams.get('userInfo') : this.userInfo;
-    console.log('this.uesrInfo', this.userInfo);
   }
 
   presentToast(message) {
