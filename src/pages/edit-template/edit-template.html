@@ -3,6 +3,11 @@
     <ion-title>
       Edit Template
     </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="onFill()">
+        Fill
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -18,7 +23,7 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-list id="list" [dragula]="'questions'" [(dragulaModel)]="globalProvider.questions">
+  <ion-list margin id="list" [dragula]="'questions'" [(dragulaModel)]="globalProvider.questions">
     <ion-item-sliding #slidingItem *ngFor="let question of globalProvider.questions; let i = index;">
       <ion-item #item *ngIf="question.answerType != 'Section Header'">
         <ion-icon item-start [name]="question.icon" (click)="onEdit(i);">

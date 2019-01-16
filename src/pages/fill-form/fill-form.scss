@@ -1,0 +1,39 @@
+page-fill-form {
+  .section-card {
+    background: gray;
+    color: white;
+    padding: 15px !important;
+  }
+
+  .card-content {
+    padding: 0;
+  }
+
+  ion-datetime, ion-input {
+    border: 1px solid lightgray;
+    padding-left: 10px !important;
+    margin-bottom: 5px;
+  }
+
+  ion-item {
+    margin-right: 0 !important;
+    border: none;
+  }
+
+  .item-icon {
+    margin-left: 10px !important;
+    margin-top: 25px !important;
+  }
+
+  .drawing-div {
+    padding: 10px 16px;
+  }
+
+  .draw-btn {
+    width: 100%;
+  }
+
+  .btn-icon {
+    margin-right: 10px;
+  }
+}

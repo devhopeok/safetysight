@@ -4,6 +4,7 @@ import { AnswerTypePage } from '../answer-type/answer-type';
 import { DragulaService } from 'ng2-dragula';
 import { GlobalProvider} from '../../providers/global/global';
 import { EditQuestionPage } from '../edit-question/edit-question';
+import { FillFormPage } from '../fill-form/fill-form';
 
 @Component({
   selector: 'page-edit-template',
@@ -58,6 +59,7 @@ export class EditTemplatePage {
         setting: setting,
       });
 
+    console.log("quesitons", JSON.stringify(this.globalProvider.questions));
     this.answerType = 'Multiple Choice';
     this.question = "";
     this.icon = 'ios-list-box';
@@ -88,5 +90,9 @@ export class EditTemplatePage {
 
   onDelete(item, index) {
     this.globalProvider.questions.splice(index, 1);
+  }
+
+  onFill() {
+    this.navCtrl.push(FillFormPage);
   }
 }

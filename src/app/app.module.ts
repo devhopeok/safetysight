@@ -19,6 +19,9 @@ import { Signup3Page } from '../pages/signup3/signup3';
 import { Signup4Page } from '../pages/signup4/signup4';
 import { Signup5Page } from '../pages/signup5/signup5';
 import { EditUserPage } from '../pages/edit-user/edit-user';
+import { FillFormPage } from '../pages/fill-form/fill-form';
+import { CanvasDraw } from '../pages/canvas-draw/canvas-draw';
+import { DrawPage } from '../pages/draw/draw';
 
 @NgModule({
   declarations: [
@@ -35,6 +38,9 @@ import { EditUserPage } from '../pages/edit-user/edit-user';
     Signup4Page,
     Signup5Page,
     EditUserPage,
+    FillFormPage,
+    CanvasDraw,
+    DrawPage,
   ],
   imports: [
     BrowserModule,
@@ -56,6 +62,9 @@ import { EditUserPage } from '../pages/edit-user/edit-user';
     Signup4Page,
     Signup5Page,
     EditUserPage,
+    FillFormPage,
+    CanvasDraw,
+    DrawPage,
   ],
   providers: [
     StatusBar,
