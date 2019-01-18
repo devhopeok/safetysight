@@ -22,6 +22,8 @@ import { EditUserPage } from '../pages/edit-user/edit-user';
 import { FillFormPage } from '../pages/fill-form/fill-form';
 import { CanvasDraw } from '../pages/canvas-draw/canvas-draw';
 import { DrawPage } from '../pages/draw/draw';
+import { AgGridModule } from 'ag-grid-angular';
+import { ShowGridPage } from '../pages/show-grid/show-grid';
 
 @NgModule({
   declarations: [
@@ -41,9 +43,11 @@ import { DrawPage } from '../pages/draw/draw';
     FillFormPage,
     CanvasDraw,
     DrawPage,
+    ShowGridPage,
   ],
   imports: [
     BrowserModule,
+    AgGridModule.withComponents([]),
     DragulaModule.forRoot(),
     IonicModule.forRoot(MyApp)
   ],
@@ -65,6 +69,7 @@ import { DrawPage } from '../pages/draw/draw';
     FillFormPage,
     CanvasDraw,
     DrawPage,
+    ShowGridPage,
   ],
   providers: [
     StatusBar,
