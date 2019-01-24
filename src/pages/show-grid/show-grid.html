@@ -3,6 +3,12 @@
     <ion-title>
       Open Incidents
     </ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="onExport()">
+        Export
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -14,6 +20,10 @@
     pagination="true"
     paginationAutoPageSize="true"
     floatingFilter="true"
+    (gridReady)="onGridReady($event)"
+    [defaultColDef]="defaultColDef"
+    (columnResized)="onColumnResized($event)"
+    (cellClicked)="onCellClicked($event)"
     >
   </ag-grid-angular>
 </ion-content>

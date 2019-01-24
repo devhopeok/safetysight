@@ -27,3 +27,47 @@ ion-item {
 .toast-wrapper {
     margin-bottom: 50px !important;
 }
+
+.cell-class {
+    text-align: center;
+    white-space: normal !important;
+}
+
+.cell-id {
+    text-align: center;
+    white-space: normal !important;
+    color: green;
+}
+
+.ag-cell {
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    display: flex !important;
+    font-size: 14px;
+}
+
+.ag-header-cell-sortable {
+    background: green;
+    text-align: center;
+    color: white;
+}
+
+.ag-header-cell-label {
+    justify-content: center;
+}
+
+.ag-floating-filter-input {
+    border: 1px solid gray;
+}
+
+// .ag-paging-panel {
+//     height: 40px !important;
+// }
+
+// .ag-paging-button {
+//     background-size: 35px 35px !important;
+//     height: 35px !important;
+//     width: 35px !important;
+//     opacity: 1 !important;
+// }

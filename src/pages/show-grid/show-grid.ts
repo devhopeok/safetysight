@@ -1,19 +1,31 @@
 import { Component } from '@angular/core';
 import { NavController, ToastController, Events, MenuController } from 'ionic-angular';
+import { EditTemplatePage } from '../edit-template/edit-template';
 
 @Component({
   selector: 'page-show-grid',
   templateUrl: 'show-grid.html'
 })
 export class ShowGridPage {
+  private gridApi;
+  private gridColumnApi;
+
+  defaultColDef = {
+    autoHeight: true, 
+    cellClass: "cell-class", 
+    resizable: true,
+    sortable: true, 
+    filter: 'agTextColumnFilter',
+  };
+
   columnDefs = [
-    {headerName: 'ID', field: 'id', sortable: true, filter: 'agTextColumnFilter', width: 100 },
-    {headerName: 'Date', field: 'date', sortable: true, filter: 'agTextColumnFilter', width: 120},
-    {headerName: 'Incident', field: 'incident', sortable: true, filter: 'agTextColumnFilter' },
-    {headerName: 'Business Unit', field: 'business_unit', sortable: true, filter: 'agTextColumnFilter', width: 150 },
-    {headerName: 'Type', field: 'type', sortable: true, filter: 'agTextColumnFilter', width: 150},
-    {headerName: 'Severity', field: 'severity', sortable: true, filter: 'agTextColumnFilter', width: 120},
-    {headerName: 'Description', field: 'desc', filter: 'agTextColumnFilter' }
+    {headerName: 'ID', field: 'id',  width: 120, cellClass: 'cell-id'},
+    {headerName: 'Date', field: 'date', width: 120, },
+    {headerName: 'Incident', field: 'incident', width: 250,},
+    {headerName: 'Business Unit', field: 'business_unit', width: 150, },
+    {headerName: 'Type', field: 'type', width: 150, },
+    {headerName: 'Severity', field: 'severity', width: 120, },
+    {headerName: 'Description', field: 'desc', width: 250, }
   ];
 
   rowData = [
@@ -40,5 +52,52 @@ export class ShowGridPage {
     public events: Events,
     public menuCtrl: MenuController) {
     
+  }
+
+  onExport() {
+    var params = {
+      skipHeader: this.getBooleanValue("#skipHeader"),
+      columnGroups: this.getBooleanValue("#columnGroups"),
+      skipFooters: this.getBooleanValue("#skipFooters"),
+      skipGroups: this.getBooleanValue("#skipGroups"),
+      skipPinnedTop: this.getBooleanValue("#skipPinnedTop"),
+      skipPinnedBottom: this.getBooleanValue("#skipPinnedBottom"),
+      allColumns: this.getBooleanValue("#allColumns"),
+      onlySelected: this.getBooleanValue("#onlySelected"),
+      suppressQuotes: this.getBooleanValue("#suppressQuotes"),
+      fileName: new Date() + ".csv",
+      columnSeparator: "",
+    };
+
+    this.gridApi.exportDataAsCsv(params);
+  }
+
+  onGridReady(params) {
+    this.gridApi = params.api;
+    this.gridColumnApi = params.columnApi;
+
+    setTimeout(function() {
+      params.api.resetRowHeights();
+    }, 500);
+  }
+
+  onColumnResized(event) {
+    if (event.finished) {
+      this.gridApi.resetRowHeights();
+    }
+  }
+
+  onCellClicked(event) {
+    console.log('event', event);
+    if (event.colDef.field == 'id') {
+      this.navCtrl.push(EditTemplatePage);
+    }
+  }
+
+  getBooleanValue(cssSelector) {
+    if (document.querySelector(cssSelector)) {
+      return document.querySelector(cssSelector).checked === true;
+    }
+    return false;
   }
 }
