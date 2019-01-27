@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Actions
+    </ion-title>
+
+    <ion-buttons right>
+      <button ion-button icon-only (click)="onAdd()">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="section-overdue-div">
+    <ion-icon name="information-circle"></ion-icon>Overdue
+  </div>
+  <ion-card>
+    <ion-card-header>
+      <p>Workplace Inspection</p>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <ion-icon name="person"></ion-icon>
+        </ion-thumbnail>
+        <ion-label>Samuel Adams</ion-label>
+        <p item-end>6/12/18</p>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="section-div">
+    Due in the next week
+  </div>
+  <ion-card>
+    <ion-card-header>
+      <p>January Safety Audit</p>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <ion-icon name="person"></ion-icon>
+        </ion-thumbnail>
+        <ion-label>Samuel Adams</ion-label>
+        <p item-end>1/12/19</p>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <p>Action (Workplace Inspection INS1234)</p>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <ion-icon name="person"></ion-icon>
+        </ion-thumbnail>
+        <ion-label>Samuel Adams</ion-label>
+        <p item-end>6/1/19</p>
+      </ion-item>
+      <p>Get three quotes to fix the broken guard on the main cutting machine and provide to Dave for review.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="section-div">
+    Due in the future
+  </div>
+  <ion-card>
+    <ion-card-header>
+      <p>April Safety Audit</p>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <ion-icon name="person"></ion-icon>
+        </ion-thumbnail>
+        <ion-label>Samuel Adams</ion-label>
+        <p item-end>1/4/19</p>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

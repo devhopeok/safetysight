@@ -4,7 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { LoginPage } from '../pages/login/login';
-import { TemplatesPage } from '../pages/templates/templates';
+import { TabsPage } from '../pages/tabs/tabs';
 
 @Component({
   templateUrl: 'app.html'
@@ -25,7 +25,7 @@ export class MyApp {
       var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
 
       if (localStorage.getItem('loginInfo') && diffDays < 28) {
-        this.rootPage = TemplatesPage;
+        this.rootPage = TabsPage;
       } else {
         this.logOut();
       }

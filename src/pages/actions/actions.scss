@@ -1,0 +1,38 @@
+page-actions {
+  .due-p {
+    color: gray;
+    font-size: 14px;
+  }
+
+  .card-header, .card-content{
+    padding: 5px;
+  }
+
+  ion-thumbnail {
+    min-width: 20px !important;
+    min-height: 20px !important;
+  }
+
+  .section-overdue-div {
+    width: 100vw;
+    height: 30px;
+    background: lightgray;
+    vertical-align: middle;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+    color: red;
+  }
+
+  .section-div {
+    width: 100vw;
+    height: 30px;
+    background: lightgray;
+    vertical-align: middle;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+  }
+}

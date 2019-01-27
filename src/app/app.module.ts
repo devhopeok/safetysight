@@ -24,6 +24,8 @@ import { CanvasDraw } from '../pages/canvas-draw/canvas-draw';
 import { DrawPage } from '../pages/draw/draw';
 import { AgGridModule } from 'ag-grid-angular';
 import { ShowGridPage } from '../pages/show-grid/show-grid';
+import { TabsPage } from '../pages/tabs/tabs';
+import { ActionsPage } from '../pages/actions/actions';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import { ShowGridPage } from '../pages/show-grid/show-grid';
     CanvasDraw,
     DrawPage,
     ShowGridPage,
+    TabsPage,
+    ActionsPage,
   ],
   imports: [
     BrowserModule,
@@ -70,6 +74,8 @@ import { ShowGridPage } from '../pages/show-grid/show-grid';
     CanvasDraw,
     DrawPage,
     ShowGridPage,
+    TabsPage,
+    ActionsPage,
   ],
   providers: [
     StatusBar,
