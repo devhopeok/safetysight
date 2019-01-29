@@ -26,6 +26,7 @@ import { AgGridModule } from 'ag-grid-angular';
 import { ShowGridPage } from '../pages/show-grid/show-grid';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ActionsPage } from '../pages/actions/actions';
+import { AvailableFormPage } from '../pages/available-form/available-form';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { ActionsPage } from '../pages/actions/actions';
     ShowGridPage,
     TabsPage,
     ActionsPage,
+    AvailableFormPage,
   ],
   imports: [
     BrowserModule,
@@ -76,6 +78,7 @@ import { ActionsPage } from '../pages/actions/actions';
     ShowGridPage,
     TabsPage,
     ActionsPage,
+    AvailableFormPage,
   ],
   providers: [
     StatusBar,

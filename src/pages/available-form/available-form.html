@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Complete Form
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="onClose()">
+        <ion-icon name="close-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item *ngFor="let item of activeForms" (click)="onSelectForm(item)">
+    <ion-icon item-start color="primary" [name]="item.icon"></ion-icon>
+    <ion-label>{{item.type}}</ion-label>
+  </ion-item>
+</ion-content>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
+import { AvailableFormPage } from '../available-form/available-form';
 
 @Component({
   selector: 'page-actions',
@@ -7,11 +8,15 @@ import { NavController } from 'ionic-angular';
 })
 export class ActionsPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
 
   }
 
   onAdd() {
-    
+    const modal = this.modalCtrl.create(AvailableFormPage);
+    modal.onDidDismiss(data => {
+      if (data) {}
+    });
+    modal.present();
   }
 }

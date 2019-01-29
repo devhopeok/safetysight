@@ -7,16 +7,18 @@ import { NavController, ViewController } from 'ionic-angular';
 })
 export class AnswerTypePage {
 
-  answerType = [{type: 'Section Header', icon: 'ios-book'},
-                {type: 'Checkbox', icon: 'checkbox'},
-                {type: 'Date Time', icon: 'md-calendar'},
-                {type: 'Drawing', icon: 'brush'},
-                {type: 'Location', icon: 'md-pin'},
-                {type: 'Multiple Choice', icon: 'ios-list-box'},
-                {type: 'Media', icon: 'ios-videocam'},
-                {type: 'Signature', icon: 'md-create'},
-                {type: 'Slider', icon: 'md-game-controller-a'},
-                {type: 'Text', icon: 'logo-angular'}];
+  answerType = [
+    {type: 'Section Header', icon: 'ios-book'},
+    {type: 'Checkbox', icon: 'checkbox'},
+    {type: 'Date Time', icon: 'md-calendar'},
+    {type: 'Drawing', icon: 'brush'},
+    {type: 'Location', icon: 'md-pin'},
+    {type: 'Multiple Choice', icon: 'ios-list-box'},
+    {type: 'Media', icon: 'ios-videocam'},
+    {type: 'Signature', icon: 'md-create'},
+    {type: 'Slider', icon: 'md-game-controller-a'},
+    {type: 'Text', icon: 'logo-angular'},
+   ];
 
   constructor(public navCtrl: NavController, public viewCtrl: ViewController) {
 
